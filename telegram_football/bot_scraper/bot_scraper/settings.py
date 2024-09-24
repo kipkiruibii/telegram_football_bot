@@ -28,11 +28,6 @@ TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
 #CONCURRENT_REQUESTS = 32
 PLAYWRIGHT_LAUNCH_OPTIONS = {
     "headless": False,  # Set to False to run in full browser mode
-    "args": [
-        "--disable-setuid-sandbox",
-        "--no-sandbox",
-        "--disable-dev-shm-usage",
-    ],
 }
 
 # Increase timeout for navigating to heavy sites
