@@ -23,6 +23,6 @@ class BookscraperSpider(scrapy.Spider):
 
         for item in items:
             yield {
-                'tab': item.css('div .filters__text').get()
+                'tab': item.css('div .filters__text::text').get()
 
             }
