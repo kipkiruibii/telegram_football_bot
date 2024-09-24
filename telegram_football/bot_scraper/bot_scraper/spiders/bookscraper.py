@@ -12,6 +12,7 @@ class BookscraperSpider(scrapy.Spider):
     def start_requests(self):
         yield scrapy.Request("https://www.flashscore.co.ke/", meta={
             "playwright": True,
+            'playwright_page': {'timeout': 90000},
             "playwright_page_methods": [
                 PageMethod("wait_for_selector", '.filters__tab'),
             ],
