@@ -26,7 +26,17 @@ DOWNLOAD_HANDLERS = {
 TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
+PLAYWRIGHT_LAUNCH_OPTIONS = {
+    "headless": False,  # Set to False to run in full browser mode
+    "args": [
+        "--disable-setuid-sandbox",
+        "--no-sandbox",
+        "--disable-dev-shm-usage",
+    ],
+}
 
+# Increase timeout for navigating to heavy sites
+PLAYWRIGHT_DEFAULT_NAVIGATION_TIMEOUT = 60000  #
 # Configure a delay for requests for the same website (default: 0)
 # See https://docs.scrapy.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
