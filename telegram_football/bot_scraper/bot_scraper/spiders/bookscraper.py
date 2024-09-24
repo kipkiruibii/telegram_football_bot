@@ -10,7 +10,7 @@ class BookscraperSpider(scrapy.Spider):
     # start_urls = ["https://books.toscrape.com/"]
 
     def start_requests(self):
-        yield scrapy.Request("https://books.toscrape.com", meta={
+        yield scrapy.Request("https://www.flashscore.co.ke/", meta={
             "playwright": True,
             'playwright_page': {'timeout': 90000},
             "playwright_page_methods": [
