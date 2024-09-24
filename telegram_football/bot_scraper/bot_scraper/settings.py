@@ -12,6 +12,7 @@ BOT_NAME = "bot_scraper"
 SPIDER_MODULES = ["bot_scraper.spiders"]
 NEWSPIDER_MODULE = "bot_scraper.spiders"
 
+PLAYWRIGHT_BROWSER_TYPE = "firefox"  # or "webkit"
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = "bot_scraper (+http://www.yourdomain.com)"
