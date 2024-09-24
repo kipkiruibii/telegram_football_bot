@@ -27,9 +27,17 @@ DOWNLOAD_HANDLERS = {
 TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
+# settings.py
+
 PLAYWRIGHT_LAUNCH_OPTIONS = {
-    "headless": False,  # Set to False to run in full browser mode
+    "headless": True,  # Run in headless mode
+    "args": [
+        "--no-sandbox",               # Avoid issues with sandboxing
+        "--disable-setuid-sandbox",   # Disable setuid sandbox
+        "--disable-dev-shm-usage",    # Prevent shared memory crashes
+    ],
 }
+
 
 # Increase timeout for navigating to heavy sites
 PLAYWRIGHT_DEFAULT_NAVIGATION_TIMEOUT = 60000  #
