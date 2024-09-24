@@ -20,9 +20,10 @@ class BookscraperSpider(scrapy.Spider):
 
     def parse(self, response):
         items = response.css('.filters__tab')
-
-        for item in items:
-            yield {
-                'tab': item.css('.filters__text::text').get()
-
-            }
+        for i in items:
+            print(i)
+        # for item in items:
+        #     yield {
+        #         'tab': item.css('.filters__text::text').get()
+        #
+        #     }
